@@ -1,0 +1,73 @@
+{
+	"info": {
+		"_postman_id": "8da70737-49a0-43cc-9c00-cf1a7cf945a8",
+		"name": "tree",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "createTree",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nodeElements\": [\n        5,\n        3,\n        8,\n        6,\n        9,\n        1,\n        4,\n        10\n    ]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/trees",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"trees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getLowestCommonAncestor",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"treeElements\": [\n        5,\n        3,\n        8,\n        6,\n        9,\n        1,\n        4,\n        10\n    ],\n    \"nodeValue1\": 6,\n    \"nodeValue2\": 10\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/trees/getLowestCommonAncestor",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"trees",
+						"getLowestCommonAncestor"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
